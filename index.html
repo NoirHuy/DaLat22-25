@@ -268,27 +268,25 @@
             font-weight: 500;
         }
 
-        /* --- 7. IMAGES (ĐÃ SỬA ĐỔI) --- */
+        /* --- 7. IMAGES --- */
         .activity-img-container {
             margin-top: 16px;
             width: 100%;
-            /* height: 220px;  <-- ĐÃ XÓA CHIỀU CAO CỐ ĐỊNH */
             border-radius: 16px;
             overflow: hidden;
             position: relative;
-            background: rgba(0,0,0,0.03); /* Màu nền nhẹ phòng khi ảnh load chậm */
+            background: rgba(0,0,0,0.03); 
         }
 
         .activity-img {
             width: 100%;
-            height: auto; /* <-- Tự động theo tỉ lệ ảnh */
-            /* object-fit: cover; <-- ĐÃ XÓA để hiển thị full ảnh */
-            display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh */
+            height: auto; 
+            display: block; 
             transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .activity-card:hover .activity-img {
-            transform: scale(1.05); /* Zoom nhẹ hơn một chút để đỡ bị vỡ hạt nếu ảnh nhỏ */
+            transform: scale(1.05); 
         }
 
         /* --- 8. TOTAL SECTION --- */
@@ -354,7 +352,7 @@
                     <h3 class="activity-name"><span class="emoji">🚌</span> Xe Phương Trang</h3>
                     <div class="location-row">
                         <span>📍</span> 
-                        <a href="https://www.google.com/maps/search/?api=1&query=Bến+xe+Liên+tỉnh+Đà+Lạt" target="_blank" class="location-link">Bến xe Liên tỉnh Đà Lạt</a>
+                        <a href="https://www.google.com/maps/search/Bến+xe+Liên+tỉnh+Đà+Lạt" target="_blank" class="location-link">Bến xe Liên tỉnh Đà Lạt</a>
                     </div>
                     <div class="cost-tag">💰 260.000đ</div>
                 </div>
@@ -366,11 +364,11 @@
             <div class="timeline">
                 
                 <div class="activity-card type-sleep">
-                    <span class="time-badge">7h00 - Checkin</span>
-                    <h3 class="activity-name"><span class="emoji">🏨</span> KS Tường Vy Central</h3>
+                    <span class="time-badge">7h00 -> 7h15</span>
+                    <h3 class="activity-name"><span class="emoji">🏨</span> Checkin Home - KS Tường Vy Central</h3>
                     <div class="location-row">
                         <span>📍</span> 
-                        <a href="https://www.google.com/maps/search/?api=1&query=Khách+sạn+Tường+Vy+Dalat+Central+46+Phan+Như+Thạch" target="_blank" class="location-link">46 Phan Như Thạch, P1</a>
+                        <a href="https://www.google.com/maps/search/46+Phan+Như+Thạch+Đà+Lạt" target="_blank" class="location-link">46 Phan Như Thạch, P1</a>
                     </div>
                     <div class="cost-tag">💰 250.000đ</div>
                     <div class="activity-img-container">
@@ -378,12 +376,23 @@
                     </div>
                 </div>
 
-                <div class="activity-card type-eat">
-                    <span class="time-badge">7h15 - Ăn sáng</span>
-                    <h3 class="activity-name"><span class="emoji">🍳</span> Bánh căn chị 7</h3>
+                <div class="activity-card type-move">
+                    <span class="time-badge">7h00 -> 7h15</span>
+                    <h3 class="activity-name"><span class="emoji">🛵</span> Thuê xe tại Khách Sạn</h3>
                     <div class="location-row">
                         <span>📍</span> 
-                        <a href="https://www.google.com/maps/search/?api=1&query=Bánh+căn+chị+7+1C+Hoàng+Hoa+Thám" target="_blank" class="location-link">1C Hoàng Hoa Thám</a>
+                        <a href="https://www.google.com/maps/search/46+Phan+Như+Thạch+Đà+Lạt" target="_blank" class="location-link">46 Phan Như Thạch, P1</a>
+                    </div>
+                    <div class="cost-tag">💰 200.000đ</div>
+                    <div class="note-box">1 ngày / 2 xe</div>
+                </div>
+
+                <div class="activity-card type-eat">
+                    <span class="time-badge">7h15 -> 8h00</span>
+                    <h3 class="activity-name"><span class="emoji">🍳</span> Ăn sáng - Bánh căn chị 7</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Bánh+căn+chị+7+Đà+Lạt" target="_blank" class="location-link">1C Hoàng Hoa Thám</a>
                     </div>
                     <div class="cost-tag">💰 50.000đ</div>
                     <div class="activity-img-container">
@@ -392,19 +401,56 @@
                 </div>
 
                 <div class="activity-card type-play">
-                    <span class="time-badge">8h00 - 9h00</span>
-                    <h3 class="activity-name"><span class="emoji">🚶</span> Dạo Hồ Xuân Hương</h3>
+                    <span class="time-badge">8h00 -> 9h00</span>
+                    <h3 class="activity-name"><span class="emoji">🚶</span> Đi dạo - Hồ Xuân Hương</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Hồ+Xuân+Hương+Đà+Lạt" target="_blank" class="location-link">Tp. Đà Lạt</a>
+                    </div>
+                    <div class="cost-tag">💰 0đ (Free)</div>
                     <div class="activity-img-container">
-                        <img src="https://www.vietfuntravel.com.vn/image/data/Blog/chia-se/thong-tin-ho-xuan-huong-da-lat-nam-o-duong-nao/thong-tin-ho-xuan-huong-da-lat-nam-o-duong-nao-1.jpg" alt="Ho Xuan Huong" class="activity-img">
+                        <img src="https://smartland.vn/wp-content/uploads/2024/11/khung_canh_ho_xuan_huong_mua_xuan-1.jpg" alt="Ho Xuan Huong" class="activity-img">
                     </div>
                 </div>
 
                 <div class="activity-card type-play">
-                    <span class="time-badge">14h00 - 17h00</span>
-                    <h3 class="activity-name"><span class="emoji">🐶</span> Puppy Farm</h3>
+                    <span class="time-badge">9h00 -> 11h00</span>
+                    <h3 class="activity-name"><span class="emoji">👗</span> Thuê đồ - Tiệm Nắng</h3>
                     <div class="location-row">
                         <span>📍</span> 
-                        <a href="https://www.google.com/maps/search/?api=1&query=Puppy+Farm+Cam+Ly+Măng+Lin" target="_blank" class="location-link">Cam Ly, Măng Lin</a>
+                        <a href="https://www.google.com/maps/search/Tiệm+Nắng+74+Phù+Đổng+Thiên+Vương" target="_blank" class="location-link">Hẻm 74 Phù Đổng Thiên Vương</a>
+                    </div>
+                    <div class="cost-tag">💰 0đ (Tự túc)</div>
+                     <div class="activity-img-container">
+                        <img src="banggiathuedo.jpg" alt="Thue do" class="activity-img">
+                    </div>
+                </div>
+
+                <div class="activity-card type-sleep">
+                    <span class="time-badge">11h00 -> 13h00</span>
+                    <h3 class="activity-name"><span class="emoji">🛌</span> Về KS nghỉ ngơi</h3>
+                    <div class="cost-tag">💰 0đ</div>
+                </div>
+
+                <div class="activity-card type-eat">
+                    <span class="time-badge">13h00 -> 13h45</span>
+                    <h3 class="activity-name"><span class="emoji">🍜</span> Ăn trưa - Bánh ướt lòng gà Thảo</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Bánh+ướt+lòng+gà+Thảo+Đà+Lạt" target="_blank" class="location-link">B6 KQH, 12A Triệu Việt Vương</a>
+                    </div>
+                    <div class="cost-tag">💰 50.000đ</div>
+                    <div class="activity-img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl9dgbF4S6iT2gjuTTM5JxWs3--92iq1gJoA&s" alt="Banh uot long ga" class="activity-img">
+                    </div>
+                </div>
+
+                <div class="activity-card type-play">
+                    <span class="time-badge">14h00 -> 17h00</span>
+                    <h3 class="activity-name"><span class="emoji">🐶</span> Vui chơi - Puppy Farm</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Puppy+Farm+Đà+Lạt" target="_blank" class="location-link">Cam Ly, Măng Lin</a>
                     </div>
                     <div class="cost-tag">💰 100.000đ</div>
                     <div class="activity-img-container">
@@ -412,14 +458,49 @@
                     </div>
                 </div>
 
-                <div class="activity-card type-eat">
-                    <span class="time-badge">19h00 - Tối</span>
-                    <h3 class="activity-name"><span class="emoji">🔥</span> Tiệm Nướng & Chill Xóm Lèo</h3>
-                    <div class="cost-tag">💰 200.000đ</div>
-                    <div class="note-box">⚠️ Lưu ý: Phải đặt bàn trước</div>
-                    <div class="activity-img-container">
-                        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeQ4kWIzQ0oHlVxc7lr3hLtLoQsJkaqOfW5xXhm4zwvnWMbLic_ch94edl8hF5NELiQqkQUil2ZO5avhRqkNC24EILf1alad-Lve_6ui8jf0Wq-2fN9jI5SA7NU2JYhoYY?key=DNcrdq4Z1hzxfTIz353yzEos" alt="Nuong" class="activity-img">
+                <div class="activity-card type-sleep">
+                    <span class="time-badge">17h00 -> 18h30</span>
+                    <h3 class="activity-name"><span class="emoji">🛌</span> Về KS nghỉ ngơi</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/46+Phan+Như+Thạch+Đà+Lạt" target="_blank" class="location-link">46 Phan Như Thạch</a>
                     </div>
+                    <div class="cost-tag">💰 0đ</div>
+                </div>
+
+                <div class="activity-card type-play">
+                    <span class="time-badge">19h00 -> 20h00</span>
+                    <h3 class="activity-name"><span class="emoji">🚶</span> Đi dạo - Chợ đêm</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://freshdalat.vn/wp-content/uploads/2023/05/gioi-thieu-tong-quan-cho-da-lat.jpg" target="_blank" class="location-link">Đường Nguyễn Thị Minh Khai</a>
+                    </div>
+                    <div class="cost-tag">💰 0đ (Tự túc)</div>
+                     <div class="activity-img-container">
+                        <img src="https://freshdalat.vn/wp-content/uploads/2023/05/gioi-thieu-tong-quan-cho-da-lat.jpg" alt="Chợ đêm" class="activity-img">
+                    </div>
+                </div>
+
+                <div class="activity-card type-eat">
+                    <span class="time-badge">20h00 -> 21h00</span>
+                    <h3 class="activity-name"><span class="emoji">🔥</span> Ăn tối - Tiệm Nướng & Chill Xóm Lèo</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Tiệm+Nướng+Chill+Xóm+Lèo" target="_blank" class="location-link">113 Huỳnh Tấn Phát, P11</a>
+                    </div>
+                    <div class="cost-tag">💰 200.000đ</div>
+                    <div class="note-box">⚠️ Đã đặt bàn lúc 20h30</div>
+                    <div class="activity-img-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rGodXmptq93fAz4iuxv29JgaYmXOID71-A&s" alt="Nuong" class="activity-img">
+                        <img src="menuchillxomleo.jpg" alt="Menu" class="activity-img">
+                    </div>
+                </div>
+
+                <div class="activity-card type-sleep">
+                    <span class="time-badge">21h00 -> 3h00</span>
+                    <h3 class="activity-name"><span class="emoji">🛌</span> Về KS nghỉ ngơi</h3>
+                    <div class="note-box">Về ngủ sớm sáng thức dậy sớm</div>
+                    <div class="cost-tag">💰 0đ</div>
                 </div>
             </div>
         </div>
@@ -428,22 +509,32 @@
             <div class="day-header">Ngày 24/01: Săn Mây ☁️</div>
             <div class="timeline">
                 
+                <div class="activity-card type-sleep">
+                     <span class="time-badge">3h00 -> 4h00</span>
+                    <h3 class="activity-name"><span class="emoji">⏰</span> Thức & Chuẩn bị</h3>
+                    <div class="cost-tag">💰 0đ</div>
+                </div>
+
                 <div class="activity-card type-play">
-                    <span class="time-badge">4h00 - Săn mây</span>
-                    <h3 class="activity-name"><span class="emoji">☁️</span> Cầu Gỗ Bình Minh</h3>
+                    <span class="time-badge">4h00 -> 10h00</span>
+                    <h3 class="activity-name"><span class="emoji">☁️</span> Săn mây - Văn Công Tour</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Cầu+Gỗ+Bình+Minh+Đà+Lạt" target="_blank" class="location-link">Cầu Gỗ Bình Minh</a>
+                    </div>
                     <div class="cost-tag">💰 199.000đ</div>
-                    <div class="note-box">🚙 Xe rước tại KS lúc 4h20</div>
+                    <div class="note-box">🚙 4h20 - 4h30 xe rước tại KS</div>
                     <div class="activity-img-container">
-                        <img src="https://hoadalattravel.vn/wp-content/uploads/2024/11/cau-go-san-may-da-lat-1.jpeg" alt="San may" class="activity-img">
+                        <img src="https://bazantravel.com/cdn/medias/uploads/58/58883-cau-go-san-may-da-lat-700x418.jpg" alt="San may" class="activity-img">
                     </div>
                 </div>
 
                 <div class="activity-card type-eat">
-                    <span class="time-badge">10h30 - Ăn trưa</span>
-                    <h3 class="activity-name"><span class="emoji">🍲</span> Lẩu gà lá é Nam Hồng</h3>
+                    <span class="time-badge">10h30 -> 11h30</span>
+                    <h3 class="activity-name"><span class="emoji">🍲</span> Ăn trưa - Lẩu gà lá é Nam Hồng Quán</h3>
                     <div class="location-row">
                         <span>📍</span> 
-                        <a href="https://www.google.com/maps/search/?api=1&query=Lẩu+gà+lá+é+Nam+Hồng+Số+2+Hồ+Xuân+Hương" target="_blank" class="location-link">Số 2 Hồ Xuân Hương</a>
+                        <a href="https://www.google.com/maps/search/Lẩu+gà+lá+é+Nam+Hồng+Đà+Lạt" target="_blank" class="location-link">Số 2, Hồ Xuân Hương, P9</a>
                     </div>
                     <div class="cost-tag">💰 200.000đ</div>
                     <div class="activity-img-container">
@@ -451,23 +542,73 @@
                     </div>
                 </div>
 
+                <div class="activity-card type-eat">
+                     <span class="time-badge">11h30</span>
+                    <h3 class="activity-name"><span class="emoji">🍰</span> Ăn vặt - Canelés Dalat</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Canelés+Dalat" target="_blank" class="location-link">Dốc cạnh 79 Phan Bội Châu</a>
+                    </div>
+                    <div class="cost-tag">💰 40.000đ</div>
+                </div>
+
+                <div class="activity-card type-sleep">
+                    <span class="time-badge">11h45 -> 13h00</span>
+                    <h3 class="activity-name"><span class="emoji">🛌</span> Về KS nghỉ ngơi</h3>
+                    <div class="cost-tag">💰 0đ</div>
+                </div>
+
                 <div class="activity-card type-play">
-                    <span class="time-badge">Chiều Chill</span>
+                    <span class="time-badge">Cafe sáng</span>
                     <h3 class="activity-name"><span class="emoji">☕</span> Nhà Nhãn Coffee</h3>
+                     <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Nhà+Nhãn+Coffee+Đà+Lạt" target="_blank" class="location-link">51/4 Quang Trung</a>
+                    </div>
                     <div class="cost-tag">💰 30.000đ</div>
                     <div class="activity-img-container">
                         <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop" alt="Cafe" class="activity-img">
                     </div>
                 </div>
 
+                 <div class="activity-card type-eat">
+                    <span class="time-badge">Ăn trưa</span>
+                    <h3 class="activity-name"><span class="emoji">🥣</span> Đôi Đũa</h3>
+                     <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Đôi+Đũa+Đà+Lạt" target="_blank" class="location-link">96 Phù Đổng Thiên Vương</a>
+                    </div>
+                    <div class="cost-tag">💰 100.000đ</div>
+                </div>
+
+                <div class="activity-card type-play">
+                    <span class="time-badge">Cafe Checkin</span>
+                    <h3 class="activity-name"><span class="emoji">📸</span> REO</h3>
+                     <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/REO+coffee+Đà+Lạt" target="_blank" class="location-link">Đường Hoa Hồng</a>
+                    </div>
+                    <div class="cost-tag">💰 80.000đ</div>
+                </div>
+
                 <div class="activity-card type-eat">
-                    <span class="time-badge">Tối</span>
+                    <span class="time-badge">Ăn tối</span>
                     <h3 class="activity-name"><span class="emoji">🥩</span> Lẩu bò Gia Lâm</h3>
                     <div class="location-row">
                         <span>📍</span> 
-                        <a href="https://www.google.com/maps/search/?api=1&query=Lẩu+bò+Gia+Lâm+30+Ngô+Quyền" target="_blank" class="location-link">30 Ngô Quyền</a>
+                        <a href="https://www.google.com/maps/search/Lẩu+bò+Gia+Lâm" target="_blank" class="location-link">30 Ngô Quyền</a>
                     </div>
                     <div class="cost-tag">💰 150.000đ</div>
+                </div>
+
+                <div class="activity-card type-eat">
+                    <span class="time-badge">Ăn vặt</span>
+                    <h3 class="activity-name"><span class="emoji">🍕</span> Bánh tráng nướng dì Đinh</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Bánh+tráng+nướng+dì+Đinh" target="_blank" class="location-link">26 Hoàng Diệu</a>
+                    </div>
+                    <div class="cost-tag">💰 50.000đ</div>
                 </div>
             </div>
         </div>
@@ -475,29 +616,91 @@
         <div class="day-section">
             <div class="day-header">Ngày 25/01: Tạm Biệt 👋</div>
             <div class="timeline">
+                
+                <div class="activity-card type-eat">
+                    <span class="time-badge">Ăn sáng</span>
+                    <h3 class="activity-name"><span class="emoji">🍜</span> Bún bò Cát Mộc Trân</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Bún+bò+Cát+Mộc+Trân" target="_blank" class="location-link">91 Hùng Vương</a>
+                    </div>
+                    <div class="cost-tag">💰 55.000đ</div>
+                </div>
+
                 <div class="activity-card type-play">
+                    <span class="time-badge">Cafe Chill</span>
                     <h3 class="activity-name"><span class="emoji">☕</span> Papacino Cafe</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Papacino+Cafe" target="_blank" class="location-link">Hẻm 6B Trần Hưng Đạo</a>
+                    </div>
                     <div class="cost-tag">💰 55.000đ</div>
                     <div class="activity-img-container">
                         <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="Cafe" class="activity-img">
                     </div>
                 </div>
 
+                <div class="activity-card type-play">
+                    <span class="time-badge">Vui chơi</span>
+                    <h3 class="activity-name"><span class="emoji">🐶</span> Puppy Farm</h3>
+                    <div class="location-row">
+                         <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Puppy+Farm" target="_blank" class="location-link">Cam Ly, Măng Lin</a>
+                    </div>
+                    <div class="cost-tag">💰 100.000đ</div>
+                </div>
+
+                <div class="activity-card type-play">
+                    <span class="time-badge">Checkin Free</span>
+                    <h3 class="activity-name"><span class="emoji">🌲</span> Cung đường Yên Thế</h3>
+                    <div class="location-row">
+                         <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Đường+Yên+Thế+Đà+Lạt" target="_blank" class="location-link">Cuối đường Yên Thế</a>
+                    </div>
+                    <div class="cost-tag">💰 0đ</div>
+                </div>
+
                 <div class="activity-card type-eat">
+                    <span class="time-badge">Ăn trưa</span>
                     <h3 class="activity-name"><span class="emoji">🐔</span> Gà hầm Thổ đá</h3>
                     <div class="location-row">
                         <span>📍</span> 
-                        <a href="https://www.google.com/maps/search/?api=1&query=Gà+hầm+Thổ+đá+22+Yersin+Đà+Lạt" target="_blank" class="location-link">22 Yersin</a>
+                        <a href="https://www.google.com/maps/search/Gà+hầm+Thổ+đá+22+Yersin" target="_blank" class="location-link">22 Yersin</a>
                     </div>
                     <div class="cost-tag">💰 80.000đ</div>
                 </div>
 
+                 <div class="activity-card type-play">
+                    <span class="time-badge">Cafe Checkin</span>
+                    <h3 class="activity-name"><span class="emoji">🏨</span> Mercure Dalat Resort</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Mercure+Dalat+Resort" target="_blank" class="location-link">3 Nguyễn Du</a>
+                    </div>
+                    <div class="cost-tag">💰 100.000đ</div>
+                </div>
+
                 <div class="activity-card type-play">
+                    <span class="time-badge">Checkin Free</span>
                     <h3 class="activity-name"><span class="emoji">🌄</span> Dốc Sương Nguyệt Ánh</h3>
+                     <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Dốc+Sương+Nguyệt+Ánh" target="_blank" class="location-link">Đà Lạt</a>
+                    </div>
                     <div class="cost-tag">💰 0đ</div>
                     <div class="activity-img-container">
                         <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop" alt="Doc Da Lat" class="activity-img">
                     </div>
+                </div>
+
+                <div class="activity-card type-eat">
+                    <span class="time-badge">Ăn tối</span>
+                    <h3 class="activity-name"><span class="emoji">🔥</span> Vườn Nướng</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/Vườn+Nướng+39+Quang+Trung" target="_blank" class="location-link">39 Quang Trung</a>
+                    </div>
+                    <div class="cost-tag">💰 150.000đ</div>
                 </div>
             </div>
         </div>
