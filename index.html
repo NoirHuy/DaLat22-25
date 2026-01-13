@@ -3,381 +3,520 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vi Vu Đà Lạt 2025 🌸</title>
+    <title>Vi Vu Đà Lạt 2025 🌸 | Luxury Itinerary</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
     <style>
+        /* --- 1. CORE VARIABLES & RESET --- */
         :root {
-            --primary-color: #2e8b57; /* Màu xanh Đà Lạt */
-            --accent-color: #e67e22; /* Màu cam ấm áp */
-            --bg-color: #f0f7f4;
-            --card-bg: #ffffff;
-            --text-color: #333;
+            --primary: #3A5A40;
+            --secondary: #588157;
+            --accent: #A3B18A;
+            --cream: #DAD7CD;
+            
+            --text-dark: #1A202C;
+            --text-gray: #4A5568;
+            --highlight-orange: #D35400;
+            
+            --bg-body: #F7F9F2;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.9);
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(58, 90, 64, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            --color-move: #3498db;
+            --color-sleep: #9b59b6;
+            --color-eat: #e74c3c;
+            --color-play: #f1c40f;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--bg-body);
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(100,28%,45%,0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(38,47%,74%,0.2) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
-        .header {
-            background: linear-gradient(135deg, #2e8b57, #3cb371);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
+        /* --- 2. HEADER --- */
+        .header {
+            position: relative;
+            background: linear-gradient(160deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10%);
+            background-size: 30px 30px;
+            opacity: 0.3;
+            animation: moveBg 60s linear infinite;
+        }
+        @keyframes moveBg { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
         .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            position: relative; z-index: 2;
         }
 
         .header p {
             font-size: 1.1rem;
-            opacity: 0.9;
-            margin-top: 10px;
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 30px;
+            backdrop-filter: blur(4px);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative; z-index: 2;
         }
 
+        /* --- 3. CONTAINER --- */
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 15px;
+            max-width: 700px;
+            margin: -60px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
         }
 
+        /* --- 4. DAY SECTION & TIMELINE --- */
         .day-section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease-out backwards;
         }
+        .day-section:nth-child(2) { animation-delay: 0.2s; }
+        .day-section:nth-child(3) { animation-delay: 0.4s; }
+        .day-section:nth-child(4) { animation-delay: 0.6s; }
 
         .day-header {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 20px;
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 12px;
             display: inline-block;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 15px rgba(58, 90, 64, 0.2);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 25px;
+            border: 2px solid rgba(255,255,255,0.2);
         }
 
         .timeline {
             position: relative;
-            padding-left: 20px;
-            border-left: 2px dashed #ccc;
+            padding-left: 40px;
+            border-left: 2px dashed rgba(58, 90, 64, 0.3);
+            margin-left: 20px;
         }
 
+        /* --- 5. ACTIVITY CARD --- */
         .activity-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: var(--glass-border);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 30px;
             position: relative;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-            margin-left: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
         }
 
         .activity-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            background: rgba(255, 255, 255, 0.95);
         }
 
         .activity-card::before {
             content: '';
             position: absolute;
-            left: -24px;
-            top: 20px;
-            width: 16px;
-            height: 16px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 2px var(--primary-color);
+            top: 0; left: 0; bottom: 0;
+            width: 6px;
+            background: #ccc;
         }
+        .type-move::before { background: var(--color-move); }
+        .type-sleep::before { background: var(--color-sleep); }
+        .type-eat::before { background: var(--color-eat); }
+        .type-play::before { background: var(--color-play); }
 
-        .time {
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-            display: block;
+        .activity-card::after {
+            content: '';
+            position: absolute;
+            left: -49px;
+            top: 24px;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: #fff;
+            border: 4px solid var(--primary);
+            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.5);
+            transition: transform 0.3s ease;
+        }
+        
+        .type-move::after { border-color: var(--color-move); }
+        .type-sleep::after { border-color: var(--color-sleep); }
+        .type-eat::after { border-color: var(--color-eat); }
+        .type-play::after { border-color: var(--color-play); }
+
+        .activity-card:hover::after { transform: scale(1.2); }
+
+        /* --- 6. CONTENT --- */
+        .time-badge {
+            background: #EDF2F7;
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 8px;
         }
 
         .activity-name {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-            color: #2c3e50;
-        }
-
-        .location {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 5px;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin: 4px 0 8px;
+            line-height: 1.3;
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-
-        .address {
-            font-size: 0.85rem;
-            color: #777;
-            font-style: italic;
-            display: block;
-            margin-bottom: 8px;
+            gap: 10px;
         }
         
-        .address a {
-            color: #777;
+        .activity-name .emoji { font-size: 1.4rem; }
+
+        .location-row {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+        
+        .location-link {
+            color: var(--primary);
             text-decoration: none;
-            border-bottom: 1px dotted #777;
+            font-weight: 700;
+            border-bottom: 1px dashed rgba(58, 90, 64, 0.4);
+            transition: all 0.2s ease;
+        }
+        .location-link:hover {
+            color: var(--highlight-orange);
+            border-bottom-style: solid;
+        }
+        .location-link::after {
+            content: '↗';
+            font-size: 0.7em;
+            margin-left: 4px;
+            vertical-align: top;
+            opacity: 0.7;
         }
 
-        .cost {
-            display: inline-block;
-            background-color: #fff3cd;
-            color: #856404;
-            padding: 3px 8px;
-            border-radius: 5px;
+        .cost-tag {
+            background: linear-gradient(45deg, #FFF3E0, #FFE0B2);
+            color: var(--highlight-orange);
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 6px 14px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 5px rgba(211, 84, 0, 0.1);
+        }
+
+        .note-box {
+            margin-top: 12px;
+            background-color: #FEF3C7;
+            color: #92400E;
+            padding: 10px 14px;
+            border-radius: 8px;
             font-size: 0.9rem;
-            font-weight: bold;
+            border-left: 4px solid #F59E0B;
+            font-weight: 500;
         }
 
-        .icon {
-            margin-right: 5px;
+        /* --- 7. IMAGES (ĐÃ SỬA ĐỔI) --- */
+        .activity-img-container {
+            margin-top: 16px;
+            width: 100%;
+            /* height: 220px;  <-- ĐÃ XÓA CHIỀU CAO CỐ ĐỊNH */
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            background: rgba(0,0,0,0.03); /* Màu nền nhẹ phòng khi ảnh load chậm */
         }
 
-        /* Loại hoạt động (màu sắc tag) */
-        .tag {
-            font-size: 0.75rem;
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: white;
-            margin-left: 10px;
-            vertical-align: middle;
+        .activity-img {
+            width: 100%;
+            height: auto; /* <-- Tự động theo tỉ lệ ảnh */
+            /* object-fit: cover; <-- ĐÃ XÓA để hiển thị full ảnh */
+            display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh */
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        .tag-eat { background-color: #ff6b6b; }
-        .tag-play { background-color: #4ecdc4; }
-        .tag-move { background-color: #45b7d1; }
-        .tag-sleep { background-color: #a55eea; }
 
+        .activity-card:hover .activity-img {
+            transform: scale(1.05); /* Zoom nhẹ hơn một chút để đỡ bị vỡ hạt nếu ảnh nhỏ */
+        }
+
+        /* --- 8. TOTAL SECTION --- */
         .total-section {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-top: 40px;
+            background: #fff;
+            border-radius: 24px;
+            padding: 40px;
             text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+        
+        .total-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+        }
+
+        .total-section h2 {
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+
+        .total-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            font-family: 'Nunito', sans-serif;
+            background: -webkit-linear-gradient(45deg, var(--primary), var(--highlight-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         @media (max-width: 600px) {
-            .header h1 { font-size: 1.8rem; }
+            .header h1 { font-size: 2.2rem; }
+            .timeline { padding-left: 30px; margin-left: 10px; }
+            .activity-card::after { left: -39px; width: 14px; height: 14px; }
+            .activity-card { padding: 20px 16px; }
+            .activity-name { font-size: 1.25rem; }
+            .total-price { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>Đà Lạt Calling 🌲</h1>
-        <p>Lịch trình chi tiết: 22/01 - 25/01/2025</p>
+        <h1>Đà Lạt Plan 2025 🌲</h1>
+        <p>Hành trình chữa lành: 22/01 - 25/01/2025</p>
     </div>
 
     <div class="container">
 
         <div class="day-section">
-            <div class="day-header">📅 22/01/2025 - Khởi Hành</div>
+            <div class="day-header">Ngày 22/01: Khởi Hành 🚌</div>
             <div class="timeline">
-                <div class="activity-card">
-                    <span class="time">⏰ 23:00 - 07:00 (+1)</span>
-                    <h3 class="activity-name">Di chuyển đến Đà Lạt <span class="tag tag-move">Di chuyển</span></h3>
-                    <div class="location">🚌 Xe Phương Trang Limousine</div>
-                    <span class="address"><a href="https://www.google.com/maps/search/?api=1&query=Bến xe Liên tỉnh Đà Lạt" target="_blank">📍 Bến xe Liên tỉnh Đà Lạt</a></span>
-                    <div class="cost">💰 780.000đ (3 vé)</div>
+                <div class="activity-card type-move">
+                    <span class="time-badge">23h00 --> 7h00</span>
+                    <h3 class="activity-name"><span class="emoji">🚌</span> Xe Phương Trang</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=Bến+xe+Liên+tỉnh+Đà+Lạt" target="_blank" class="location-link">Bến xe Liên tỉnh Đà Lạt</a>
+                    </div>
+                    <div class="cost-tag">💰 260.000đ</div>
                 </div>
             </div>
         </div>
 
         <div class="day-section">
-            <div class="day-header">📅 23/01/2025 - Chào Đà Lạt</div>
+            <div class="day-header">Ngày 23/01: Chill Đà Lạt 📸</div>
             <div class="timeline">
-                <div class="activity-card">
-                    <span class="time">⏰ Buổi sáng</span>
-                    <h3 class="activity-name">Check-in Khách Sạn <span class="tag tag-sleep">Nghỉ ngơi</span></h3>
-                    <div class="location">🏨 Khách Sạn Tường Vy Dalat Central</div>
-                    <span class="address"><a href="https://www.google.com/maps/search/?api=1&query=46 Phan Như Thạch, Phường 1, Đà Lạt" target="_blank">📍 46 Phan Như Thạch, P1, Đà Lạt</a></span>
-                    <div class="cost">💰 750.000đ</div>
-                </div>
                 
-                <div class="activity-card">
-                    <span class="time">⏰ Ngay sau khi đến</span>
-                    <h3 class="activity-name">Thuê xe máy <span class="tag tag-move">Di chuyển</span></h3>
-                    <div class="location">🛵 Thuê tại khách sạn</div>
-                    <div class="cost">💰 600.000đ (3 xe)</div>
+                <div class="activity-card type-sleep">
+                    <span class="time-badge">7h00 - Checkin</span>
+                    <h3 class="activity-name"><span class="emoji">🏨</span> KS Tường Vy Central</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=Khách+sạn+Tường+Vy+Dalat+Central+46+Phan+Như+Thạch" target="_blank" class="location-link">46 Phan Như Thạch, P1</a>
+                    </div>
+                    <div class="cost-tag">💰 250.000đ</div>
+                    <div class="activity-img-container">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/534594202.jpg?k=e391fe943c0485c99e037388ae8f6180c4799b84d436b6ee2c67f1059699e652&o=" alt="Khach san" class="activity-img">
+                    </div>
                 </div>
 
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn sáng: Bánh căn <span class="tag tag-eat">Ăn uống</span></h3>
-                    <div class="location">🍳 Bánh căn chị 7</div>
-                    <span class="address"><a href="https://www.google.com/maps/search/?api=1&query=1C Hoàng Hoa Thám, Đà Lạt" target="_blank">📍 1C Hoàng Hoa Thám</a></span>
-                    <div class="cost">💰 50.000đ</div>
+                <div class="activity-card type-eat">
+                    <span class="time-badge">7h15 - Ăn sáng</span>
+                    <h3 class="activity-name"><span class="emoji">🍳</span> Bánh căn chị 7</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=Bánh+căn+chị+7+1C+Hoàng+Hoa+Thám" target="_blank" class="location-link">1C Hoàng Hoa Thám</a>
+                    </div>
+                    <div class="cost-tag">💰 50.000đ</div>
+                    <div class="activity-img-container">
+                        <img src="banhcan.png" alt="Bánh căn" class="activity-img">
+                    </div>
                 </div>
 
-                <div class="activity-card">
-                    <h3 class="activity-name">Sống ảo tại Thôn 13 <span class="tag tag-play">Vui chơi</span></h3>
-                    <div class="location">📸 Thôn 13</div>
-                    <span class="address"><a href="https://www.google.com/maps/search/?api=1&query=Thôn 13, Tà Nung, Đà Lạt" target="_blank">📍 Thôn 3, Tà Nung</a></span>
-                    <div class="cost">💰 100.000đ</div>
+                <div class="activity-card type-play">
+                    <span class="time-badge">8h00 - 9h00</span>
+                    <h3 class="activity-name"><span class="emoji">🚶</span> Dạo Hồ Xuân Hương</h3>
+                    <div class="activity-img-container">
+                        <img src="https://www.vietfuntravel.com.vn/image/data/Blog/chia-se/thong-tin-ho-xuan-huong-da-lat-nam-o-duong-nao/thong-tin-ho-xuan-huong-da-lat-nam-o-duong-nao-1.jpg" alt="Ho Xuan Huong" class="activity-img">
+                    </div>
                 </div>
 
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn trưa: Cơm gà <span class="tag tag-eat">Ăn uống</span></h3>
-                    <div class="location">🍗 Cơm gà Hương Xưa</div>
-                    <span class="address"><a href="https://www.google.com/maps/search/?api=1&query=35 Mạc Đĩnh Chi, Đà Lạt" target="_blank">📍 35 Mạc Đĩnh Chi</a></span>
-                    <div class="cost">💰 45.000đ</div>
+                <div class="activity-card type-play">
+                    <span class="time-badge">14h00 - 17h00</span>
+                    <h3 class="activity-name"><span class="emoji">🐶</span> Puppy Farm</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=Puppy+Farm+Cam+Ly+Măng+Lin" target="_blank" class="location-link">Cam Ly, Măng Lin</a>
+                    </div>
+                    <div class="cost-tag">💰 100.000đ</div>
+                    <div class="activity-img-container">
+                        <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/y2sr7oh8k3oisdd2eo2g/PuppyFarmTicketinDaLat.jpg" alt="Puppy Farm" class="activity-img">
+                    </div>
                 </div>
 
-                <div class="activity-card">
-                    <h3 class="activity-name">Dạo mát & Check-in <span class="tag tag-play">Free</span></h3>
-                    <div class="location">🌲 3 bis Đống Đa</div>
-                    <div class="cost">💰 0đ</div>
-                </div>
-
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn tối: Đồ nướng Chill <span class="tag tag-eat">Ăn uống</span></h3>
-                    <div class="location">🔥 Tiệm nướng Trạm Dừng Chill</div>
-                    <span class="address"><a href="https://www.google.com/maps/search/?api=1&query=111 Huỳnh Tấn Phát, Đà Lạt" target="_blank">📍 111 Huỳnh Tấn Phát</a></span>
-                    <div class="cost">💰 250.000đ</div>
-                </div>
-
-                <div class="activity-card">
-                    <h3 class="activity-name">Chill Night <span class="tag tag-play">Vui chơi</span></h3>
-                    <div class="location">🍸 On The Rocks Cocktail</div>
-                    <span class="address"><a href="https://www.google.com/maps/search/?api=1&query=69 Trương Công Định, Đà Lạt" target="_blank">📍 69 Trương Công Định</a></span>
-                    <div class="cost">💰 220.000đ</div>
+                <div class="activity-card type-eat">
+                    <span class="time-badge">19h00 - Tối</span>
+                    <h3 class="activity-name"><span class="emoji">🔥</span> Tiệm Nướng & Chill Xóm Lèo</h3>
+                    <div class="cost-tag">💰 200.000đ</div>
+                    <div class="note-box">⚠️ Lưu ý: Phải đặt bàn trước</div>
+                    <div class="activity-img-container">
+                        <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeQ4kWIzQ0oHlVxc7lr3hLtLoQsJkaqOfW5xXhm4zwvnWMbLic_ch94edl8hF5NELiQqkQUil2ZO5avhRqkNC24EILf1alad-Lve_6ui8jf0Wq-2fN9jI5SA7NU2JYhoYY?key=DNcrdq4Z1hzxfTIz353yzEos" alt="Nuong" class="activity-img">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="day-section">
-            <div class="day-header">📅 24/01/2025 - Ăn Sập Đà Lạt</div>
+            <div class="day-header">Ngày 24/01: Săn Mây ☁️</div>
             <div class="timeline">
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn sáng: ATISPHO <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 KQH H19 Phạm Hồng Thái</span>
-                    <div class="cost">💰 55.000đ</div>
+                
+                <div class="activity-card type-play">
+                    <span class="time-badge">4h00 - Săn mây</span>
+                    <h3 class="activity-name"><span class="emoji">☁️</span> Cầu Gỗ Bình Minh</h3>
+                    <div class="cost-tag">💰 199.000đ</div>
+                    <div class="note-box">🚙 Xe rước tại KS lúc 4h20</div>
+                    <div class="activity-img-container">
+                        <img src="https://hoadalattravel.vn/wp-content/uploads/2024/11/cau-go-san-may-da-lat-1.jpeg" alt="San may" class="activity-img">
+                    </div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn vặt: Bánh Canelés <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 Dốc cạnh 79 Phan Bội Châu</span>
-                    <div class="cost">💰 100.000đ</div>
+
+                <div class="activity-card type-eat">
+                    <span class="time-badge">10h30 - Ăn trưa</span>
+                    <h3 class="activity-name"><span class="emoji">🍲</span> Lẩu gà lá é Nam Hồng</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=Lẩu+gà+lá+é+Nam+Hồng+Số+2+Hồ+Xuân+Hương" target="_blank" class="location-link">Số 2 Hồ Xuân Hương</a>
+                    </div>
+                    <div class="cost-tag">💰 200.000đ</div>
+                    <div class="activity-img-container">
+                        <img src="https://static.vinwonders.com/production/lau-ga-la-e-da-lat-banner.jpg" alt="Lau ga" class="activity-img">
+                    </div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Cafe Sáng: Nhà Nhãn <span class="tag tag-play">Cafe</span></h3>
-                    <span class="address">📍 51/4 Quang Trung</span>
-                    <div class="cost">💰 30.000đ</div>
+
+                <div class="activity-card type-play">
+                    <span class="time-badge">Chiều Chill</span>
+                    <h3 class="activity-name"><span class="emoji">☕</span> Nhà Nhãn Coffee</h3>
+                    <div class="cost-tag">💰 30.000đ</div>
+                    <div class="activity-img-container">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop" alt="Cafe" class="activity-img">
+                    </div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn trưa: Đôi Đũa <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 96 Phù Đổng Thiên Vương</span>
-                    <div class="cost">💰 100.000đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Cafe Check-in: REO <span class="tag tag-play">Cafe</span></h3>
-                    <span class="address">📍 Đường Hoa Hồng</span>
-                    <div class="cost">💰 80.000đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn tối: Lẩu bò Gia Lâm <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 30 Ngô Quyền</span>
-                    <div class="cost">💰 150.000đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn vặt đêm: Bánh tráng dì Đinh <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 26 Hoàng Diệu</span>
-                    <div class="cost">💰 50.000đ</div>
+
+                <div class="activity-card type-eat">
+                    <span class="time-badge">Tối</span>
+                    <h3 class="activity-name"><span class="emoji">🥩</span> Lẩu bò Gia Lâm</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=Lẩu+bò+Gia+Lâm+30+Ngô+Quyền" target="_blank" class="location-link">30 Ngô Quyền</a>
+                    </div>
+                    <div class="cost-tag">💰 150.000đ</div>
                 </div>
             </div>
         </div>
 
         <div class="day-section">
-            <div class="day-header">📅 25/01/2025 - Tạm Biệt</div>
+            <div class="day-header">Ngày 25/01: Tạm Biệt 👋</div>
             <div class="timeline">
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn sáng: Bún bò Cát Mộc Trân <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 91 Hùng Vương</span>
-                    <div class="cost">💰 55.000đ</div>
+                <div class="activity-card type-play">
+                    <h3 class="activity-name"><span class="emoji">☕</span> Papacino Cafe</h3>
+                    <div class="cost-tag">💰 55.000đ</div>
+                    <div class="activity-img-container">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="Cafe" class="activity-img">
+                    </div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Cafe Chill: Papacino <span class="tag tag-play">Cafe</span></h3>
-                    <span class="address">📍 Hẻm 6B Trần Hưng Đạo</span>
-                    <div class="cost">💰 55.000đ</div>
+
+                <div class="activity-card type-eat">
+                    <h3 class="activity-name"><span class="emoji">🐔</span> Gà hầm Thổ đá</h3>
+                    <div class="location-row">
+                        <span>📍</span> 
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gà+hầm+Thổ+đá+22+Yersin+Đà+Lạt" target="_blank" class="location-link">22 Yersin</a>
+                    </div>
+                    <div class="cost-tag">💰 80.000đ</div>
                 </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Chơi thú: Puppy Farm <span class="tag tag-play">Vui chơi</span></h3>
-                    <span class="address">📍 Cam Ly, Măng Lin</span>
-                    <div class="cost">💰 100.000đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Check-in Free: Cung đường Yên Thế <span class="tag tag-play">Sống ảo</span></h3>
-                    <div class="cost">💰 0đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn trưa: Gà hầm Thổ đá <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 22 Yersin</span>
-                    <div class="cost">💰 80.000đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Cafe sang chảnh: Mercure Resort <span class="tag tag-play">Cafe</span></h3>
-                    <span class="address">📍 3 Nguyễn Du</span>
-                    <div class="cost">💰 100.000đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Check-in Free: Dốc Sương Nguyệt Ánh <span class="tag tag-play">Sống ảo</span></h3>
-                    <div class="cost">💰 0đ</div>
-                </div>
-                <div class="activity-card">
-                    <h3 class="activity-name">Ăn tối: Vườn Nướng <span class="tag tag-eat">Ăn uống</span></h3>
-                    <span class="address">📍 39 Quang Trung</span>
-                    <div class="cost">💰 150.000đ</div>
+
+                <div class="activity-card type-play">
+                    <h3 class="activity-name"><span class="emoji">🌄</span> Dốc Sương Nguyệt Ánh</h3>
+                    <div class="cost-tag">💰 0đ</div>
+                    <div class="activity-img-container">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop" alt="Doc Da Lat" class="activity-img">
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="total-section">
-            <h2>✨ Tổng kết chuyến đi ✨</h2>
-            <p>Đã bao gồm: Vé xe, khách sạn, thuê xe, ăn uống tẹt ga</p>
-            <h3>Ước tính: ~3.800.000đ / người</h3>
+            <h2>✨ Tổng Chi Phí Dự Kiến ✨</h2>
+            <div class="total-price" id="totalCost">Đang tính toán...</div>
         </div>
 
     </div>
 
     <script>
-        // Thêm hiệu ứng xuất hiện khi cuộn trang
         document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.activity-card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
+            let total = 0;
+            document.querySelectorAll('.cost-tag').forEach(el => {
+                const numbers = el.textContent.match(/(\d{1,3}(\.\d{3})*)/);
+                if (numbers) total += parseInt(numbers[0].replace(/\./g, ''));
             });
-
-            cards.forEach(card => {
-                card.style.opacity = 0;
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-                observer.observe(card);
-            });
+            document.getElementById('totalCost').textContent = "~ " + new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total) + " / người";
         });
     </script>
 </body>
